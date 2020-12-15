@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Weapons</title>
+    
+  </head>
+  <body>
+    <p>Input the weapon qualities below</p>
+      <label for="wname">Weapon Name:</label><br>
+      <input type="text" id="wname" name="wname"><br>
+      
+      <label for = "range">Range</label><br>
+      <select id ="ranges">
+        <option value = "engaged">Engaged</option>
+        <option value = "short">Short</option>
+        <option value = "medium">Medium</option>
+        <option value = "long">Long</option>
+        <option value = "extreme">Extreme</option>
+      </select><br>
+
+      <label for="encum">Encumbrance: </label><br>
+      <input type="text" id="encum" name="encum"><br>
+      
+      <label for="price">Price:</label><br>
+      <input type="text" id="price" name="price"><br>
+      
+      <label for="crit">Crit:</label><br>
+      <input type="text" id="crit" name="crit"><br>
+      
+      <label for="hpoints">Hard Points:</label><br>
+      <input type="text" id="hpoints" name="hpoints"><br>
+      
+      <label for="rarity">Rarity:</label><br>
+      <input type="text" id="rarity" name="rarity"><br>
+      
+      <label for="damage">Damage:</label><br>
+      <input type="text" id="damage" name="damage"><br><br>
+
+    <fieldset>
+      <label for="damage">Special:</label><br>
+      <input type="text" id="special" name="special"><br>
+
+      <label for="rank">Rank:</label><br>
+      <input type="text" id="rank" name="rank"><br><br>
+
+  <legend>Special Properties</legend>
+      <table id ="mytable" style="width:20%" border="1">
+
+        
+      
+        <tr>
+            <th>Special</th>
+            <th>Rank</th>
+        </tr>
+      </table><br>
+
+      <button onclick="addRow()">Add Special</button><br>
+      <script>
+        function addRow() {
+          var special = document.getElementById("special").value;
+          var rank = document.getElementById("rank").value;
+          var table = document.getElementById("mytable");
+          var row = table.insertRow(-1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          cell1.innerHTML = special;
+          cell2.innerHTML = rank;
+        }
+      </script>
+
+    </fieldset>
+<br>
+<br>
+<br>
+
+      <input type="submit" value-"Submit">
+      
+
+    </form>
+  </body>
+</html>
